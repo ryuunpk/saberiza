@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17654f">
+  <meta name="description" content="Leia um ensinamento da Saberiza.">
+  <title>Ensinamento — Saberiza</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/content.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Página inicial"><span class="brand-mark" aria-hidden="true">S</span><span><strong data-site-name>Saberiza</strong><small>Conhecimento que acompanha você</small></span></a>
+    <div class="header-actions"><button id="theme-toggle" class="icon-button" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button><a class="button button-secondary button-small" href="./index.html">Voltar à biblioteca</a></div>
+  </header>
+  <main id="conteudo" class="article-page page-shell">
+    <div id="content-status" class="notice notice-info" role="status">Carregando ensinamento…</div>
+    <article id="teaching-article" class="reading-article" hidden>
+      <div class="breadcrumb"><a href="./index.html">Início</a><span aria-hidden="true">/</span><span id="article-category-crumb">Ensinamento</span></div>
+      <header class="reading-header">
+        <p id="article-category-label" class="eyebrow"></p>
+        <div id="title-feature" class="title-feature"><h1 id="article-title"></h1></div>
+        <p id="article-subtitle" class="reading-subtitle"></p>
+        <div id="reading-meta" class="reading-meta"><span id="article-author"></span><span aria-hidden="true">·</span><time id="article-date"></time><span aria-hidden="true">·</span><span id="reading-time"></span></div>
+      </header>
+      <div id="cover-wrap" class="reading-cover" hidden><img id="article-cover" alt="Imagem de capa do ensinamento" loading="lazy"></div>
+      <div id="safety-notice" class="notice notice-info safety-note" hidden></div>
+      <div id="article-body" class="article-body"></div>
+      <section id="references-section" class="references-section" hidden><h2>Fontes e referências</h2><div id="article-references" class="article-body"></div></section>
+      <div id="article-updated" class="updated-note" hidden></div>
+      <div class="reading-actions"><button id="favorite-button" class="button button-secondary" type="button">☆ Salvar nos favoritos</button><button id="share-button" class="button button-primary" type="button">Compartilhar ensinamento</button></div>
+    </article>
+    <section id="related-section" class="section-block" hidden><div class="section-heading"><div><p class="eyebrow">Continue explorando</p><h2>Outros ensinamentos</h2></div></div><div id="related-grid" class="article-grid"></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand brand-footer" href="./index.html"><span class="brand-mark" aria-hidden="true">S</span><span><strong data-site-name>Saberiza</strong><small>Conhecimento que acompanha você</small></span></a><p>Aprender, praticar e compartilhar.</p><div class="footer-links"><a href="./index.html">Início</a><a href="./admin.html">Modo Ensino</a></div></footer>
+</body>
+</html>

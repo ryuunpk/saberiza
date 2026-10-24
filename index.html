@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17654f">
+  <meta name="description" content="Uma biblioteca de ensinamentos escolares e conhecimentos para o dia a dia.">
+  <title>Saberiza — aprender com clareza</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <script type="module" src="./js/public.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="Página inicial">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span><strong data-site-name>Saberiza</strong><small>Conhecimento que acompanha você</small></span>
+    </a>
+    <div class="header-actions">
+      <button id="theme-toggle" class="icon-button" type="button" aria-label="Alternar tema" title="Alternar tema">◐</button>
+      <button id="menu-toggle" class="icon-button menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+    </div>
+    <nav id="main-nav" class="main-nav" aria-label="Menu principal">
+      <a href="./index.html">Início</a>
+      <a href="./index.html?area=escolar">Ensino escolar</a>
+      <a href="./index.html?area=geral">Conhecimentos gerais</a>
+      <a href="./index.html?recentes=1">Recentes</a>
+      <a href="./index.html?favoritos=1">Favoritos</a>
+      <a href="#about">Sobre</a>
+      <a href="#contato">Contato</a>
+      <a class="nav-admin" href="./admin.html">Modo Ensino <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="page-shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> Aprenda uma coisa de cada vez</p>
+        <h1>Conhecimento claro.<br><em>Possibilidades maiores.</em></h1>
+        <p class="hero-description">Ensinamentos escolares e ideias práticas para entender o mundo, desenvolver habilidades e continuar aprendendo.</p>
+        <form id="search-form" class="search-form" role="search">
+          <label class="sr-only" for="search-input">Pesquisar ensinamentos</label>
+          <span aria-hidden="true" class="search-symbol">⌕</span>
+          <input id="search-input" name="q" type="search" maxlength="120" placeholder="O que você quer aprender hoje?">
+          <button type="submit" class="button button-primary">Pesquisar</button>
+        </form>
+        <p class="search-hint">Pesquise por título, assunto ou palavra-chave.</p>
+      </div>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-orb"><span>Saiba</span><strong>+</strong><span>Pratique</span></div>
+        <div class="float-note note-one"><span class="note-icon">01</span><span><b>Descobrir</b><small>Novas ideias</small></span></div>
+        <div class="float-note note-two"><span class="note-icon note-icon-light">02</span><span><b>Compreender</b><small>Passo a passo</small></span></div>
+      </div>
+    </section>
+
+    <div id="connection-status" class="notice notice-info" role="status" hidden></div>
+    <section id="search-categories-wrap" class="section-block" hidden>
+      <div class="section-heading"><div><p class="eyebrow">Navegação</p><h2>Categorias encontradas</h2></div></div>
+      <div id="search-categories" class="category-grid"></div>
+    </section>
+
+    <section id="browse-section" class="section-block">
+      <div class="section-heading"><div><p class="eyebrow">Explore por assunto</p><h2>Onde você quer começar?</h2><p class="section-subtitle">Escolha uma área e encontre conteúdos organizados por etapa e tema.</p></div></div>
+      <div id="category-grid" class="category-grid" aria-live="polite">
+        <article class="skeleton-card"></article><article class="skeleton-card"></article><article class="skeleton-card"></article>
+      </div>
+    </section>
+
+    <section id="current-category-section" class="section-block" hidden>
+      <div class="breadcrumb" id="category-breadcrumb"><a href="./index.html">Início</a><span aria-hidden="true">/</span><span>Categoria</span></div>
+      <div class="section-heading"><div><p class="eyebrow">Biblioteca de conteúdos</p><h2 id="category-title">Categoria</h2><p id="category-description" class="section-subtitle"></p></div></div>
+      <div id="child-category-grid" class="category-grid"></div>
+    </section>
+
+    <section id="articles-section" class="section-block">
+      <div class="section-heading section-heading-row"><div><p class="eyebrow" id="articles-eyebrow">Para continuar aprendendo</p><h2 id="articles-title">Ensinamentos recentes</h2><p id="articles-description" class="section-subtitle">Novos conteúdos, publicados e organizados para você.</p></div></div>
+      <div id="article-grid" class="article-grid" aria-live="polite"><article class="skeleton-card"></article><article class="skeleton-card"></article></div>
+      <div id="pagination" class="pagination" hidden><button id="load-more" type="button" class="button button-secondary">Carregar mais</button></div>
+    </section>
+
+    <section id="about" class="about-band">
+      <div class="about-symbol" aria-hidden="true">✳</div>
+      <div><p class="eyebrow">Sobre a plataforma</p><h2>Aprender deve ser acessível.</h2><p>Uma biblioteca em crescimento, com explicações organizadas e conteúdos práticos. Os ensinamentos são publicados pelo responsável pela plataforma e podem evoluir com o tempo.</p></div>
+      <a class="text-link" href="./index.html?area=geral">Explorar conhecimentos <span aria-hidden="true">→</span></a>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contato">
+    <a class="brand brand-footer" href="./index.html"><span class="brand-mark" aria-hidden="true">S</span><span><strong data-site-name>Saberiza</strong><small>Conhecimento que acompanha você</small></span></a>
+    <p>Aprender, praticar e compartilhar.</p>
+    <p class="footer-note">O contato público ainda precisa ser configurado antes da divulgação do site.</p>
+    <div class="footer-links"><a href="#about">Sobre</a><a href="#contato">Contato</a><a href="./privacidade.html">Privacidade</a><a href="./admin.html">Modo Ensino</a></div>
+    <small class="footer-note">Conteúdos informativos. Confira fontes e orientações de segurança quando aplicável.</small>
+  </footer>
+</body>
+</html>
